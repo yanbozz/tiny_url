@@ -15,10 +15,10 @@ pip install -r requirements.txt
 python manage.py runserver
 
 ## Signup and Login
-Visit <yourdomain>/auth/signup (e.g. http://127.0.0.1:8000/auth/signup) to sign up your own account and login
+Visit "<yourdomain>/auth/signup" (e.g. http://127.0.0.1:8000/auth/signup) to sign up your own account and login
 
 ## Shorten Your Url
-Go to /shorteners/list to create your shortened urls and browse them in a list
+Go to "/shorteners/list" to create your shortened urls and browse them in a list
 
 
 
