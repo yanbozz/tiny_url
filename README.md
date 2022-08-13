@@ -1,6 +1,6 @@
 # Welcome to Tiny Url!
 
-A System to shorten urls based on Django 3.2.15 and Python 3.6
+A system to shorten urls based on Django 3.2.15 and Python 3.6
 
 Functions
 1. Accounts signup, login/logout
