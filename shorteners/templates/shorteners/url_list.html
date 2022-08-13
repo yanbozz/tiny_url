@@ -1,0 +1,35 @@
+{% block content %}
+<div class="container">
+  <h1>Shorten Your Url</h1>
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <form method="POST">
+        {% csrf_token %}
+          {{ form }}
+        <button class="btn btn-primary" type="submit">shorten</button>
+        <div class="form-group">
+        </div>
+      </form>
+      <br>
+    </div>
+  </div>
+  <h2>My Urls</h2>
+  {% for url_obj in urls %}
+  <div class="post-preview">
+      <p class="post-title" >
+        <span>Short url: </span>
+        <a href="{{ url_obj.short_url }}">
+          {{ url_obj.short_url }}
+        </a>
+      </p>
+    <p class="">
+        <span>Destination: </span>
+        <a href="{{ url_obj.long_url }}">
+          {{ url_obj.long_url }}
+        </a>
+    </p>
+  </div>
+  <hr>
+{% endfor %}
+</div>
+{% endblock content %}

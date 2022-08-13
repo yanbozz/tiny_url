@@ -1,0 +1,36 @@
+{% block content %}
+<header class="masthead">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Tiny Url</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <form method="POST">
+        {% csrf_token %}
+          <legend class="border-bottom mb-4">Join Today</legend>
+          {{ form }}
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Sign Up</button>
+        </div>
+      </form>
+      <br>
+      <div class="border-top pt-3">
+        <small class="text-muted">
+          Already Have an Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+        </small>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+{% endblock content %}
